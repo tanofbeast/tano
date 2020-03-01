@@ -1,0 +1,28 @@
+namespace Hungry
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.Write("What type of thing are you eating?: ");
+            String userFood = Convert.ToString(Console.ReadLine());
+
+            Console.Write("How much such it weight? (in lbs)?: ");
+            int userPounds = Convert.ToInt32(Console.ReadLine());
+
+            double userBites = userPounds / 0.05;
+
+            double remain = userPounds - 0.05;
+            int userCounter = 0;
+
+            while (userCounter <= userBites)
+            {
+                userCounter++;
+                remain--;
+
+                Console.WriteLine("You will take bite #" + userCounter + " of the " + userFood + " that now weighs " + remain + " lbs");
+            }
+        }
+    }
+}
